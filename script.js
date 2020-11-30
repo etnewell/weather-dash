@@ -1,6 +1,6 @@
 
        
-  
+
        
 var APIKey = "53e07df4a3b3230ec78d8d73899f5a04";
 
@@ -20,6 +20,8 @@ var recentSearch = "";
 $("#citySub").click(function(){
   event.preventDefault();
   cityName =  $("#cityInp").val();
+  recentSearch = $("#cityInp").val();
+  localStorage.setItem("Save", recentSearch);
   console.log(cityName)
   // $("#cityInp").val("")
   var cityLat = "";
@@ -86,53 +88,51 @@ console.log(secondQuery);
       // $(".newBtn").click(function(){
       //   event.preventDefault();
       //   var newCity = "";
-      //   newCity =  $(this).text;
+      //   newCity =  $(this).val();
       //   console.log(newCity);
-      // //   // $("#cityInp").val("")
-      // //   var cityLat = "";
-      // //   var cityLon = "";
+      //   // $("#cityInp").val("")
+      //   var cityLat = "";
+      //   var cityLon = "";
         
-      // // var queryURL = "https://api.openweathermap.org/data/2.5/weather?" +
-      // //           "q=" + cityName + "&appid=" + APIKey;
+      // var queryURL = "https://api.openweathermap.org/data/2.5/weather?" +
+      //           "q=" + cityName + "&appid=" + APIKey;
       
-      // //  $.ajax({
-      // //         url: queryURL,
-      // //         method: "GET"
-      // //       })
-      // //         .then(function(response) {
+      //  $.ajax({
+      //         url: queryURL,
+      //         method: "GET"
+      //       })
+      //         .then(function(response) {
                 
-      // //           cityLat = response.coord.lat;
-      // //           cityLon = response.coord.lon;
-      // //           $("#cityData").text(response.name);
-      // // console.log(cityLat);
-      // // console.log(cityLon);
-      // // var secondQuery = "https://api.openweathermap.org/data/2.5/onecall?lat=" + cityLat + "&lon=" + cityLon +"&exclude=alerts&appid=" + APIKey;   
-      // // console.log(secondQuery);
-      // //       $.ajax({
-      // //         url: secondQuery,
-      // //         method: "GET"
-      // //       })
-      // //         // We store all of the retrieved data inside of an object called "response"
-      // //         .then(function(response1) {
-      // //           // Log the queryURL
+      //           cityLat = response.coord.lat;
+      //           cityLon = response.coord.lon;
+      //           $("#cityData").text(response.name);
+      // console.log(cityLat);
+      // console.log(cityLon);
+      // var secondQuery = "https://api.openweathermap.org/data/2.5/onecall?lat=" + cityLat + "&lon=" + cityLon +"&exclude=alerts&appid=" + APIKey;   
+      // console.log(secondQuery);
+      //       $.ajax({
+      //         url: secondQuery,
+      //         method: "GET"
+      //       })
+      //         // We store all of the retrieved data inside of an object called "response"
+      //         .then(function(response1) {
+      //           // Log the queryURL
       
-      // //           objResp = response1;
-      // //           console.log(objResp);
+      //           objResp = response1;
+      //           console.log(objResp);
       
-      // //           // // Log the resulting object
-      // //           // console.log(response1);
       
-      // //           var tempF = (objResp.current.temp - 273.15) * 1.80 + 32;
+      //           var tempF = (objResp.current.temp - 273.15) * 1.80 + 32;
         
-      // //           $("#cityData").text(cityName);
-      // //           $("#tempData").text(tempF.toFixed(2));
-      // //           $("#humData").text(objResp.current.humidity + "%");
-      // //           $("#windData").text(objResp.current.wind_speed + "meters/second");
-      // //           $("#uvData").text(objResp.current.uvi);
-      // //           $("#prevBtns").append("<button class='newBtn'>" + cityName + "</button>");
-      // //         })
+      //           $("#cityData").text(cityName);
+      //           $("#tempData").text(tempF.toFixed(2));
+      //           $("#humData").text(objResp.current.humidity + "%");
+      //           $("#windData").text(objResp.current.wind_speed + "meters/second");
+      //           $("#uvData").text(objResp.current.uvi);
+      //           $("#prevBtns").append("<button class='newBtn'>" + cityName + "</button>");
+      //         })
       
       //       });
            
 
-      // // })
+      // })
