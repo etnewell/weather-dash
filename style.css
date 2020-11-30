@@ -1,1 +1,29 @@
+#t1{
+    width: 50%;
+    /* border: 2px solid black;
+    border-collapse: collapse;*/
 
+}
+#t2{
+    width: 50%;
+    /* border: 2px solid black;
+    border-collapse: collapse;*/
+
+}
+#inpForm{
+    margin-left: 12.5%;
+    width: 25%;
+}
+#cityInp{
+    align-self: center;
+}
+#citySub{
+    align-self: center;
+}
+th{
+    background-color: lightgrey;
+}
+table, tr, th, td{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
